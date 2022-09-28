@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .link-active{
+        @apply flex justify-center items-center xl:justify-start text-blue-400;
+    }
+    .link{
+        @apply flex items-center justify-center xl:justify-start text-gray-800 dark:text-white
+        hover:text-blue-400 dark:hover:text-blue-400 transition duration-300 ease-in-out;
+    }
+    .icon{
+        @apply hidden xl:block xl:ml-4 font-bold;
+    }
+    .tweet-icon{
+        @apply flex items-center dark:text-white text-xs text-gray-400;
+    }
+    .hashtag-border,
+    .how-to-follow{
+    @apply border-b border-gray-200 dark:border-dim-200;
+    }
+}
+
+@layer utilities{
+    /* width */
+    ::-webkit-scrollbar,
+    .dark ::webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Start Light mode */
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border: 2px solid #fff;
+    }
+    /* End Light mode */
+
+    /* Start Dark mode */
+
+        /* Track */
+    .dark ::-webkit-scrollbar-track {
+        background-color: #374151;
+    }
+
+        /* Handle */
+    .dark ::-webkit-scrollbar-thumb {
+        background-color: #6b7280;
+        border: 2px solid #374151;
+    }
+    /* End Dark mode */
+}
+/* animation: scroll 60s linear infinite;
+width: 4440px; */
+
+/* onerror="this.onerror=null;this.src='profile.jpg'" */
